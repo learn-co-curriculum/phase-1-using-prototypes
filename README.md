@@ -21,19 +21,19 @@ let lauren = new User('lauren', 'lauren@gmail.com');
 lauren.sayHello(); //=> Hello everybody, my name is lauren whom you've been mailing at lauren@gmail.com!
 ```
 
-Let's suppose the following. Let's suppose that the `name` property costs 32 bytes
-of space. Let's also suppose that the `email` property costs 32 bytes of space.
-Let's lastly suppose that a function costs 64 bytes of space.
+Let's assume the following. Let's assume that the `name` property costs 32 bytes
+of space. Let's also assume that the `email` property costs 32 bytes of space.
+Let's lastly assume that a function costs 64 bytes of space.
 
 So to create our `lauren` instance we pay a cost of `32 + 32 + 64 = 128` bytes.
-But now let's suppose that we want to create many more `User`s...Facebook
+But now let's assume that we want to create many more `User`s - Facebook
 numbers of users. Lets suppose a paltry 1 million users. That would be:
 128 million bytes of space. While memory and disk are getting bigger and
 cheaper all the time, we'd like to be efficient whenever possible.
 
 The key to gaining efficiency is the _prototype_.
 
-## Identify inefficiency in constructor function object orientation
+## Identify Inefficiency In Constructor Function Object Orientation
 
 In our example the `name`s vary, so we can't economize there. The `email`s
 vary, so we can't economize there either. But the method, `sayHello` is the
@@ -43,7 +43,7 @@ this current context's values."
 We would like to tell all instances of `User` that they have a shared place to
 find methods. That place is called the "prototype."
 
-## Recognize the prototype as a means for reducing inefficiency
+## Recognize the Prototype as a Means for Reducing Inefficiency
 
 We access the prototype of a constructor function by typing the constructor
 function's name, and adding the attribute `.prototype`. So for `User` it's
