@@ -9,12 +9,12 @@
 
 ```js
 function User(name, email) {
-	this.name = name;
-	this.email = email;
-	this.sayHello = function() {
-		console.log(`Hello everybody, my name is ${this.name} whom you've been
+  this.name = name;
+  this.email = email;
+  this.sayHello = function() {
+    console.log(`Hello everybody, my name is ${this.name} whom you've been
 mailing at ${this.email}!`);
-	};
+  };
 }
 
 let lauren = new User('lauren', 'lauren@gmail.com');
@@ -52,12 +52,12 @@ function's name, and adding the attribute `.prototype`. So for `User` it's
 
 ```js
 function User(name, email) {
-	this.name = name;
-	this.email = email;
+  this.name = name;
+  this.email = email;
 }
 
 User.prototype.sayHello = function() {
-	console.log(`Hello everybody, my name is ${this.name}`);
+  console.log(`Hello everybody, my name is ${this.name}`);
 };
 
 let sarah = new User('sarah', 'sarah@example.com');
@@ -91,12 +91,12 @@ Your pattern for writing OO in JavaScript (Prototype-based) is the following:
 
 ```js
 function User(name, email) {
-	this.name = name;
-	this.email = email;
+  this.name = name;
+  this.email = email;
 }
 
 User.prototype.sayHello = function() {
-	console.log(`Hello everybody, my name is ${this.name}`);
+  console.log(`Hello everybody, my name is ${this.name}`);
 };
 
 let sarah = new User('sarah', 'sarah@example.com');
